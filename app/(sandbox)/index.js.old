@@ -1,0 +1,90 @@
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+
+export default function SandboxScreen() {
+  const [count, setCount] = useState(0);
+
+  // useEffect is a hook for side effects.
+  // This function will run after every render where 'count' has changed.
+  useEffect(() => {
+    // You can see this log in the terminal where you started your app.
+    console.log(`Le compteur est maintenant à : ${count}`);
+
+    // For example, you could change the title of the screen,
+    // or fetch data from an API based on the count.
+  }, [count]); // The array [count] tells React to only re-run this effect if 'count' changes.
+
+  const increment = () => setCount(c => c + 1);
+  const decrement = () => setCount(c => c - 1);
+  const gamble = () => {
+    const doubleOrHalf = Math.round(Math.random());
+    if (doubleOrHalf === 0) {
+      setCount(c => c * 2);
+    } else {
+      setCount(c => Math.ceil(c / 2));
+    }
+  };
+  const reset = () => setCount(0);
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Sandbox</Text>
+      <Text style={styles.count}>{count}</Text>
+      <View style={styles.buttonContainer}>
+        <View style={styles.row}>
+          <TouchableOpacity style={styles.button} onPress={decrement}>
+            <Text style={styles.buttonText}>-1</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={increment}>
+            <Text style={styles.buttonText}>+1</Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity style={styles.button} onPress={gamble}>
+          <Text style={styles.buttonText}>Gamble</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={reset}>
+          <Text style={styles.buttonText}>Reset</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  count: {
+    fontSize: 48,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  buttonContainer: {
+    flexDirection: 'column',
+    gap: 20,
+    alignItems: 'center',
+  },
+  row: {
+    flexDirection: 'row',
+    gap: 20,
+  },
+  button: {
+    backgroundColor: '#ff385c',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
