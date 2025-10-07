@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "house": "Villa contemporaine",
     "price": "320€",
     "location": "Côte d'Azur",
@@ -8,6 +9,7 @@
     "owner": "Isabelle Martin"
   },
   {
+    "id": 2,
     "house": "Studio charmant",
     "price": "55€",
     "location": "Clermont-Ferrand",
@@ -16,6 +18,7 @@
     "owner": "Antoine Petit"
   },
   {
+    "id": 3,
     "house": "Maison en bord de mer",
     "price": "275€",
     "location": "Biarritz",
@@ -24,6 +27,7 @@
     "owner": "Julien Dubois"
   },
   {
+    "id": 4,
     "house": "Appartement vintage",
     "price": "80€",
     "location": "Le Havre",
@@ -32,6 +36,7 @@
     "owner": "Sophie Bernard"
   },
   {
+    "id": 5,
     "house": "Chalet cosy",
     "price": "145€",
     "location": "Pyrénées",
@@ -40,6 +45,7 @@
     "owner": "Pierre Lefevre"
   },
   {
+    "id": 6,
     "house": "Maison écologique",
     "price": "190€",
     "location": "Bretagne",

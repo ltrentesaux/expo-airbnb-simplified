@@ -39,14 +39,14 @@ export default function Settings({ onClose }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0022ffc6',
+    backgroundColor: '#ffffffc6',
     padding: 20,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: '#fff',
+    color: '#000000ff',
   },
   settingItem: {
     flexDirection: 'row',
@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#fff',
+    borderBottomColor: '#000000ff',
   },
   settingText: {
     fontSize: 18,
-    color: '#fff',
+    color: '#000000ff',
   },
   button: {
     backgroundColor: '#ff385c',
