@@ -6,6 +6,7 @@ export default function ExplorerLayout() {
       screenOptions={{
         headerShown: false,
       }}
-    />
+    >
+    </Stack>
   );
 }

@@ -5,8 +5,9 @@ export default function Table({ data, onSelect }) {
   return (
     <FlatList
       data={data}
-      keyExtractor={(_, index) => index.toString()}
+      keyExtractor={(item) => item.id.toString()}
       contentContainerStyle={styles.listContainer}
+      style={styles.list}
       renderItem={({ item }) => (
         <TouchableOpacity onPress={() => onSelect(item)}>
           <View style={styles.card}>
@@ -17,11 +18,7 @@ export default function Table({ data, onSelect }) {
                 resizeMode="cover"
               />
               <View style={styles.textContainer}>
-                <Text>
-                  <Text style={styles.house}>{item.house}</Text>
-                  {" - "}
-                  <Text style={styles.location}>{item.location}</Text>
-                </Text>
+                <Text style={styles.house}>{item.house} - {item.location}</Text>
                 <Text style={styles.price}>{item.price}</Text>
               </View>
             </View>

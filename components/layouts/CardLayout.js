@@ -8,11 +8,6 @@ export default function CardLayout({ children }) {
 const styles = StyleSheet.create({
   card: {
     width: '95%',
-    position: 'absolute',
-    top: '45%',
-    left: '2.5%',
-    transform: [{ translateY: -180 }],
-    zIndex: 10,
     alignSelf: 'center',
     elevation: 10,
     backgroundColor: '#fff',

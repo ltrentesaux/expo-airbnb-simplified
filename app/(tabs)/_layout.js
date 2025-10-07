@@ -41,6 +41,18 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="sandbox"
+        options={{
+          title: 'Sandbox',
+          tabBarIcon: ({ color, size }) => (
+            <Image
+              source={require('../../assets/images/search.png')}
+              style={{ width: size, height: size, tintColor: color }}
+            />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
