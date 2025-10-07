@@ -45,6 +45,7 @@ export default function TabLayout() {
         name="sandbox"
         options={{
           title: 'Sandbox',
+          href: '(sandbox)',
           tabBarIcon: ({ color, size }) => (
             <Image
               source={require('../../assets/images/search.png')}
